@@ -1,4 +1,16 @@
 {
-	"screenshotPath": "./screenshots",
-	"screenshotPathPattern": "${DATE}_${TIME}/${FIXTURE}.png"
+	"screenshots": {
+		"path": "reports/screenshots",
+		"takeOnFails": true,
+		"pathPattern": "${DATA}_${TIME}_${FIXTURE}.png"
+	},
+	"reporter": [
+		{
+			"name": "list"
+		},
+		{
+			"name": "html",
+			"output": "reports/report.html"
+		}
+	]
 }

@@ -1,10 +1,8 @@
 import { Selector, t } from 'testcafe'
 
 class Navbar {
-	constructor() {
-		this.searchBox = Selector('#searchTerm')
-		this.signInButton = Selector('#signin_button')
-	}
+	searchBox = Selector('#searchTerm')
+	signInButton = Selector('#signin_button')
 
 	async search(text) {
 		await t

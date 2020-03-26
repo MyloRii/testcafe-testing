@@ -1,14 +1,12 @@
 import { Selector, t } from 'testcafe'
 import BasePage from './BasePage'
 
-class LoginPage extends BasePage {
-	constructor() {
-		super()
-		this.usernameInput = Selector('#user_login')
-		this.usernamePassword = Selector('#user_password')
-		this.submitButton = Selector('.btn-primary')
-		this.errorMsg = Selector('.alert-error')
-	}
+class LoginPage extends BasePage {	
+	usernameInput = Selector('#user_login')
+	usernamePassword = Selector('#user_password')
+	submitButton = Selector('.btn-primary')
+	errorMsg = Selector('.alert-error')
+
 
 	async loginToApp(username, password) {
 		await t

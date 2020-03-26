@@ -4,10 +4,7 @@
 	"description": "Automated testing with TestCafe",
 	"main": "index.js",
 	"scripts": {
-		"test": "testcafe chrome ./tests -s takeOnFails=true --reporter list",
-		"test:parallel:5": "testcafe -c 5 chrome ./tests -s takeOnFails=true --disable-page-caching",
-		"test:search": "testcafe chrome ./tests -s takeOnFails=true",
-		"test:headless": "testcafe chrome:headless ./tests -s takeOnFails=true"
+		"test": "testcafe chrome ./tests"
 	},
 	"keywords": [
 		"TestCafe"
@@ -16,7 +13,8 @@
 	"license": "ISC",
 	"dependencies": {
 		"prettier": "^1.19.1",
-		"testcafe": "^1.8.2",
+		"testcafe": "^1.8.1",
+		"testcafe-reporter-html": "^1.4.6",
 		"testcafe-reporter-list": "^2.1.0"
 	}
 }
