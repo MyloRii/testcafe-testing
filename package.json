@@ -12,9 +12,8 @@
 	"author": "Andrii Shumylo",
 	"license": "ISC",
 	"dependencies": {
-		"prettier": "^1.19.1",
+		"prettier": "^2.0.2",
 		"testcafe": "^1.8.1",
-		"testcafe-reporter-html": "^1.4.6",
-		"testcafe-reporter-list": "^2.1.0"
+		"testcafe-reporter-html": "^1.4.6"
 	}
 }

@@ -5,8 +5,8 @@ const navbar = new Navbar()
 const loginPage = new LoginPage()
 
 // prettier-ignore
-fixture `Login`
-    .page `http://zero.webappsecurity.com/index.html`
+fixture(`Login`)
+    .page(`http://zero.webappsecurity.com/index.html`)
 
 test('Verify error msg with invalid login credentials', async t => {
 	await t.click(navbar.signInButton)

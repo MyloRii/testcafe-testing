@@ -5,8 +5,8 @@ const navbar = new Navbar()
 const searchResultsPage = new SearchResultsPage()
 
 // prettier-ignore
-fixture `Search`
-    .page `http://zero.webappsecurity.com/index.html`
+fixture(`Search`)
+    .page(`http://zero.webappsecurity.com/index.html`)
 
 test('User can search info using search box', async t => {
 	navbar.search('online bank')

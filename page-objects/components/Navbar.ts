@@ -1,14 +1,12 @@
 import { Selector, t } from 'testcafe'
 
-class Navbar {
-	searchBox = Selector('#searchTerm')
-	signInButton = Selector('#signin_button')
+export default class Navbar {
+	readonly signInButton = Selector('#signin_button')
+	readonly searchBox = Selector('#searchTerm')
 
-	async search(text) {
+	async search(text: string) {
 		await t
 			.typeText(this.searchBox, text, { paste: true, replace: true })
 			.pressKey('enter')
 	}
 }
-
-export default Navbar

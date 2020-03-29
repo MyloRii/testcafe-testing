@@ -1,12 +1,11 @@
-import { Selector, t } from 'testcafe'
+import { t } from 'testcafe'
 
-//example BasePage class
 class BasePage {
-	async waitFor(milliseconds) {
+	async waitFor(milliseconds: number) {
 		await t.wait(milliseconds)
 	}
 
-	async setTestSpeed(speedLevel) {
+	async setTestSpeed(speedLevel: number) {
 		await t.setTestSpeed(speedLevel)
 	}
 }

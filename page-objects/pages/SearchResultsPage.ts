@@ -1,10 +1,6 @@
 import { Selector } from 'testcafe'
 
-class SearchResultsPage {
-	
-	resultTitle = Selector('h2')
-	linkText = Selector('fail')
-	
+export default class SearchResultsPage {
+	readonly resultTitle = Selector('h2')
+	readonly linkText = Selector('div.container > div > ul > li > a')
 }
-
-export default SearchResultsPage

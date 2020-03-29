@@ -1,19 +1,16 @@
 import { Selector, t } from 'testcafe'
 import BasePage from './BasePage'
 
-class LoginPage extends BasePage {	
-	usernameInput = Selector('#user_login')
-	usernamePassword = Selector('#user_password')
-	submitButton = Selector('.btn-primary')
-	errorMsg = Selector('.alert-error')
+export default class LoginPage extends BasePage {	
+	readonly usernameInput = Selector('#user_login')
+	readonly usernamePassword = Selector('#user_password')
+	readonly submitButton = Selector('.btn-primary')
+	readonly errorMsg = Selector('.alert-error')
 
-
-	async loginToApp(username, password) {
+	async loginToApp(username: string, password: string) {
 		await t
 			.typeText(this.usernameInput, username, { paste: true, replace: true })
 			.typeText(this.usernamePassword, password, { paste: true, replace: true })
 			.click(this.submitButton)
 	}
 }
-
-export default LoginPage

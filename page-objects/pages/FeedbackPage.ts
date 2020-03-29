@@ -1,17 +1,14 @@
-import { Selector } from 'testcafe'
+import { Selector, t } from 'testcafe'
 
-class FeedbackPage {
-	formName: Selector = Selector('#name')
-	formEmail: Selector = Selector('#email')
-	formSubject: Selector = Selector('#subject')
-	formComment: Selector = Selector('#comment')
-	formSubmitButton: Selector = Selector('input').withAttribute(
-		'value',
-		'Send Message'
-	)
-	formMsg: Selector = Selector('div')
+export default class FeedbackPage {
+	readonly formName: Selector = Selector('#name')
+	readonly formEmail: Selector = Selector('#email')
+	readonly formSubject: Selector = Selector('#subject')
+	readonly formComment: Selector = Selector('#comment')
+	readonly formSubmitButton: Selector = Selector('input').withAttribute('value','Send Message')
+	readonly formMsg: Selector = Selector('div')
 
-	async submitFeedback(t: TestController) {
+	async submitFeedback() {
 		await t
 			.typeText(this.formName, 'name', { paste: true, replace: true })
 			.typeText(this.formEmail, 'email@mail.com', { paste: true })
@@ -20,5 +17,3 @@ class FeedbackPage {
 			.click(this.formSubmitButton)
 	}
 }
-
-export default FeedbackPage
