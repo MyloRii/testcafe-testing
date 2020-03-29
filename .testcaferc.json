@@ -4,6 +4,7 @@
 		"takeOnFails": true,
 		"pathPattern": "${DATA}_${TIME}_${FIXTURE}.png"
 	},
+  "tsConfigPath": "tsconfig.json",
 	"reporter": [
 		{
 			"name": "list"

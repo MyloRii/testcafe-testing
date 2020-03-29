@@ -1,6 +1,7 @@
 import { Selector, t } from 'testcafe'
+import BasePage from './BasePage'
 
-export default class FeedbackPage {
+export default class FeedbackPage extends BasePage {
 	readonly formName: Selector = Selector('#name')
 	readonly formEmail: Selector = Selector('#email')
 	readonly formSubject: Selector = Selector('#subject')
